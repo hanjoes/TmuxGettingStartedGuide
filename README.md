@@ -2,7 +2,7 @@
 
 ## Basics
 
-* How to Start Tmux
+### How to Start Tmux
 
 In your terminal, run:
 
@@ -10,7 +10,7 @@ In your terminal, run:
 
 I put this in my terminal start script so each time I open my terminal tmux is ready.
 
-* Conrol
+### Conrol
 
 If you've used emacs, you should know the idea of **meta key** (or **prefix** in tmux terminology). Basically it is a key combination that starts a command.
 In tmux, the meta key is **ctrl+b**, and we will use **C-b** throughout the guide to represent the tmux meta key.
@@ -25,5 +25,57 @@ The second level in the hierarchy is **windows**, a session could contain multip
 
 ![Workspace](./pics/win1.png)
 
+You will notice there is a green bar at the bottom of the terminal window. And as you will see, there are two windows open. The window index starts from 0, as in the screenshot, the first window is named *SomeServer* and the second is named *AnotherServer*.
+
+There are two commands need to mention here.
+
+`C-b c : Create a window.`
+
+`C-b , : Rename the current window.`
+
+`C-b & : Kill the current window (which i never use).`
+
+`C-b w : List all the windows.`
+
+`C-b n : Next window.`
+
+`C-b p : Previous window.`
+
+`C-b <NUM> : Navigate to the window with index NUM. (Handy when you have a lot of windows)`
+
+The third level of the hierarchy is **panes**, basically everything is rendered in the pane. And you can create more panes by splitting the window, as in the picture above.
+
+The two commands take-away here are:
+
+`C-b " : Horizontally split the pane.`
+
+`C-b % : Vertically split the pane.`
+
+And you can also re-layout the panes by using:
+
+`C-b space : Toggle vertical/horizontal.`
+
+![Toggle Layout](./pics/toggle.gif)
+
+`C-b C-o : Bring the next pane to current pane.` 
+
+![Bring To Pane](./pics/bring.gif)
+
+`C-b q : Display number for each pane in current window. And pressing the number will navigate you to the pane.`
+
+![Numbered Navigation](./pics/number.gif)
+
+`C-b o : Navigate to next pane.`
+`C-b <arrow-key> : Navigate to the specified direction.`
+
+![Navigation](./pics/nav.gif)
+
+And...that's it! 
+If you are able to bring all those commands to your daily toolbox, you will get a very neat control of your workspaces.
+
+FYI, tmux is a **VERY** powerful tool, you can also detach/attach sessions, break/join panes from/to window, etc, etc. 
+If you are interested, there are a lot of great resources on the web, just start from the references below!
+
 ## References
+
 [Workflow in Tmux](https://coderwall.com/p/_g2vpq/workflow-in-tmux) Gives some handy examples of tmux workflows.
