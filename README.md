@@ -23,7 +23,7 @@ I'm not a hardcore tmux user, I mostly use tmux to do some window/pane managemen
 
 The second level in the hierarchy is **windows**, a session could contain multiple windows. I usually work on this level. For example, I'm working on some server code and want to deploy that server to remote machine and check logs. I will create a window for all workflow for that server. And split the window into **panes** (which will describe later). In this case each window is a workspace. As shown in the picture below:
 
-![Workspace](./pics/win1)
+![Workspace](./pics/win1.png)
 
 ## References
 [Workflow in Tmux](https://coderwall.com/p/_g2vpq/workflow-in-tmux) Gives some handy examples of tmux workflows.
