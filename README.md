@@ -15,11 +15,15 @@ I put this in my terminal start script so each time I open my terminal tmux is r
 If you've used emacs, you should know the idea of **meta key** (or **prefix** in tmux terminology). Basically it is a key combination that starts a command.
 In tmux, the meta key is **ctrl+b**, and we will use **C-b** throughout the guide to represent the tmux meta key.
 
-## Window/Pane Management
+## Level of Management 
 
 I'm not a hardcore tmux user, I mostly use tmux to do some window/pane management. Tmux also has very strong session management functionalities. For users interested in session management, please check out the references section.
 
+### Session
+
 **Session** though is not elaborated in this guide, you should at least know that it's the highest level of the tmux management hierarchy. A session basically manages the current working context (including windows, and more..).
+
+### Window
 
 The second level in the hierarchy is **windows**, a session could contain multiple windows. I usually work on this level. For example, I'm working on some server code and want to deploy that server to remote machine and check logs. I will create a window for all workflow for that server. And split the window into **panes** (which will describe later). In this case each window is a workspace. As shown in the picture below:
 
@@ -27,7 +31,7 @@ The second level in the hierarchy is **windows**, a session could contain multip
 
 You will notice there is a green bar at the bottom of the terminal window. And as you will see, there are two windows open. The window index starts from 0, as in the screenshot, the first window is named *SomeServer* and the second is named *AnotherServer*.
 
-There are two commands need to mention here.
+There are several commands need to mentioned here.
 
 `C-b c : Create a window.`
 
@@ -42,6 +46,12 @@ There are two commands need to mention here.
 `C-b p : Previous window.`
 
 `C-b <NUM> : Navigate to the window with index NUM. (Handy when you have a lot of windows)`
+
+And in case you want to reorder your windows:
+
+`swap-window -s <source> -t <target>`
+
+### Pane
 
 The third level of the hierarchy is **panes**, basically everything is rendered in the pane. And you can create more panes by splitting the window, as in the picture above.
 
